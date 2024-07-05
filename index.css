@@ -3,3 +3,22 @@
     padding: 20px;
     color: #b796f0;            
 }
+#img-bulb{
+    height: 170px;
+    display: block;
+    margin: 15px auto;
+}
+.btn-container{
+    display: flex;
+    justify-content: center;
+}
+.btn-toggle{
+    margin: 20px 30px;
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 20px;
+    border:1px solid goldenrod;
+    background-image: linear-gradient(to right, #9796f0, #fbc7d4);
+}
