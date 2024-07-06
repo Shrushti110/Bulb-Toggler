@@ -21,14 +21,11 @@
     border-radius: 20px;
     border:1px solid goldenrod;
     background-image: linear-gradient(to right, #9796f0, #fbc7d4);
-
 }
-
 .theme-icon{
     height: 30px;
     cursor: pointer;
 }
-
 .theme-selector-conatiner{
     position: fixed;
     right: 10px;
@@ -42,13 +39,11 @@
     background-color:#e6e6ff;
     color: black;
 }
-
 .btn-light{
     background-image: linear-gradient(to right, #9796f0, #fbc7d4);
     color:black;
     border: 1px solid black;
 }
-
 .btn-dark{
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,209,67,1) 0%, rgba(255,145,83,1) 90% );
     color:white;
