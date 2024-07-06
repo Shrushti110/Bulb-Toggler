@@ -6,37 +6,53 @@
     <title>Text tool</title>
     <link rel="stylesheet" href="index.css">
 </head>
-<body>
+<body class="theme-light" id="main">
     <div class="container">
         <div class="theme-selector-conatiner">
-            <img src="sun (1).png" class="theme-icon" onclick="enableLight()"/>
-            <img src="sun.png" class="theme-icon" onclick="enableDark()"/>
+            <img src="sun.png" class="theme-icon" onclick="enableLight()"/>
+            <img src="moon (1).png" class="theme-icon" onclick="enableDark()"/>
         
         </div>
     <h1 class="tool">Bulb Toggler</h1>
     <img src="lightbulb-off.png" id="img-bulb"/>
     <div class="btn-container">
-        <button type="button" class="btn-toggle" onclick="toggleBulb('on')">
-            ON
+        <button type="button" class="btn-toggle" id="btn-toggle" onclick="toggleBulb('on')">
+            Toggle
         </button>
-        <button type="button" class="btn-toggle" onclick="toggleBulb('off')">
-            OFF
-        </button>
+        
     </div>
 </div>
 
     <script>
         function toggleBulb(state){
             const bulbElement = document.getElementById("img-bulb")
-            bulbElement.src = state == 'on' ? "lightbulb-on.png" : "lightbulb-off.png"
+
+            if(bulbElement.src.includes("lightbulb-off.png")){
+            bulbElement.src= "lightbulb-on.png"
+            }
+            else{
+                bulbElement.src= "lightbulb-off.png"
+            }
         }
-        /*function bulboff(){
-            const bulbElement = document.getElementById("img-bulb")
-            bulbElement.src = "lightbulb-off.png"
-        }*/
 
         function enableDark(){
-            
+            const main = document.getElementById("main")
+            main.classList.remove("theme-light")
+            main.classList.add("theme-dark")
+
+            const toggleButton = document.getElementById("btn-toggle")
+            toggleButton.classList.remove("btn-light")
+            toggleButton.classList.add("btn-dark")
+        }
+   
+        function enableLight(){
+            const main = document.getElementById("main")
+            main.classList.remove("theme-dark")
+            main.classList.add("theme-light")
+
+            const toggleButton = document.getElementById("btn-toggle")
+            toggleButton.classList.remove("btn-dark")
+            toggleButton.classList.add("btn-light")
         }
     </script>
 </body>
